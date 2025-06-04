@@ -52,7 +52,10 @@ Or you can only install this script (marzban-node command) on your server by usi
 ```bash
 sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban-node.sh)" @ install-script
 ```
-
+Install Marzban Node without docker
+```
+sudo bash -c "$(curl -sL https://github.com/Gozargah/Marzban-scripts/raw/master/marzban-node-no-docker.sh)" @ install-script
+```
 Use `help` to view all commands:
 ```marzban-node help```
 
