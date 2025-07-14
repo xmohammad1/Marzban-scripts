@@ -176,9 +176,31 @@ install_package () {
 }
 
 install_docker() {
-    # Install Docker and Docker Compose using the official installation script
     colorized_echo blue "Installing Docker"
-    curl -fsSL https://get.docker.com | sh
+    detect_os
+    if [[ "$OS" == "Ubuntu"* ]] || [[ "$OS" == "Debian"* ]]; then
+        detect_and_update_package_manager
+        install_package ca-certificates
+        install_package curl
+        install_package gnupg
+        install_package lsb-release
+
+        install -m 0755 -d /etc/apt/keyrings
+        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+        chmod a+r /etc/apt/keyrings/docker.gpg
+
+        echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
+        $PKG_MANAGER update -qq >/dev/null
+
+        PACKAGE_LIST="docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-ce-rootless-extras docker-buildx-plugin"
+        if [[ $(lsb_release -cs) != "focal" ]]; then
+            PACKAGE_LIST="$PACKAGE_LIST docker-model-plugin"
+        fi
+
+        $PKG_MANAGER -y -qq install $PACKAGE_LIST >/dev/null
+    else
+        curl -fsSL https://get.docker.com | sh
+    fi
     colorized_echo green "Docker installed successfully"
 }
 
