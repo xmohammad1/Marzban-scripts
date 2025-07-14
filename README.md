@@ -54,7 +54,7 @@ sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/maste
 ```
 Install Marzban Node without docker
 ```
-sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node-no-docker.sh)" @ install-script
+sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node-no-docker.sh)" @ install
 ```
 Use `help` to view all commands:
 ```marzban-node help```
