@@ -48,9 +48,9 @@ Install Marzban-node on your server using this command with custom name:
 ```bash
 sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node.sh)" @ install --name marzban-node2
 ```
-Or you can only install this script (marzban-node command) on your server by using this command
-```bash
-sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node.sh)" @ install-script
+Install for Ubuntu 20.04
+```
+sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node-ubuntu20.sh)" @ install
 ```
 Install Marzban Node without docker
 ```
