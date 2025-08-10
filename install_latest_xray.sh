@@ -2,7 +2,7 @@
 
 # Download Xray latest
 
-RELEASE_TAG="latest"
+RELEASE_TAG="v25.3.6"
 
 if [[ "$1" ]]; then
     RELEASE_TAG="$1"
