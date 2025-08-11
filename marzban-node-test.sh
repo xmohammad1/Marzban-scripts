@@ -399,7 +399,7 @@ install_command() {
     case "$OS" in
         "Ubuntu"* | "Debian"*)
             # List of packages to install for Debian-based systems
-            PACKAGES="git python3 build-essential curl unzip gcc python3-dev libpq-dev"
+            PACKAGES="git python3 python3-pip build-essential curl unzip gcc python3-dev libpq-dev"
             for pkg in $PACKAGES; do
                 # Check if the package is installed using dpkg
                 if dpkg -s "$pkg" &>/dev/null; then
