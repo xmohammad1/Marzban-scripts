@@ -51,7 +51,7 @@ ENV_FILE="$APP_DIR/.env"
 LAST_XRAY_CORES=5
 CERT_FILE="$APP_DIR/cert.pem"
 FETCH_REPO="xmohammad1/Marzban-scripts"
-SCRIPT_URL="https://github.com/$FETCH_REPO/raw/master/marzban-node-no-docker.sh"
+SCRIPT_URL="https://github.com/$FETCH_REPO/raw/master/marzban-node-test.sh"
 
 colorized_echo() {
     local color=$1
@@ -431,7 +431,7 @@ install_command() {
     colorized_echo blue "Installing latest Xray core"
     sudo bash -c "$(curl -L https://github.com/xmohammad1/Marzban-scripts/raw/master/install_latest_xray.sh)"
     colorized_echo blue "Cloning marzban-node repository to $APP_DIR"
-    git clone https://github.com/xmohammad1/marzban-node.git "$APP_DIR"
+    git clone https://github.com/Gozargah/marzban-node.git "$APP_DIR"
     install_marzban_node_script
     install_marzban_node
     up_marzban_node
