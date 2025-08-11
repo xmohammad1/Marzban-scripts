@@ -310,6 +310,9 @@ services:
       nofile:
         soft: 1048576
         hard: 1048576
+      nproc:
+        soft: 1048576
+        hard: 1048576
     environment:
       SSL_CLIENT_CERT_FILE: "/var/lib/marzban-node/cert.pem"
       SERVICE_PORT: "$SERVICE_PORT"
