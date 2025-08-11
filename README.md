@@ -52,7 +52,11 @@ Install for Ubuntu 20.04
 ```bash
 sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node-ubuntu20.sh)" @ install
 ```
-Install Marzban Node without docker
+Install Marzban Node without docker for ubuntu 22.04
+```bash
+sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node-test.sh)" @ install
+```
+Install Marzban Node without docker for ubuntu 22.04 , 24.04 or higher
 ```bash
 sudo bash -c "$(curl -sL https://github.com/xmohammad1/Marzban-scripts/raw/master/marzban-node-no-docker.sh)" @ install
 ```
