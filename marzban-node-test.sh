@@ -347,9 +347,7 @@ update_marzban_node_script() {
 
 update_marzban_node() {
     git -C "$APP_DIR" pull
-    source "$APP_DIR/venv/bin/activate"
     pip install -r "$APP_DIR/requirements.txt"
-    deactivate
     systemctl restart "$APP_NAME"
 }
 
