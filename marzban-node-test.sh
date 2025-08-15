@@ -287,7 +287,6 @@ User=root
 WorkingDirectory=$APP_DIR
 ExecStart=/usr/bin/env python3 $APP_DIR/main.py
 Restart=on-failure
-LimitNOFILE=infinity
 
 [Install]
 WantedBy=multi-user.target
