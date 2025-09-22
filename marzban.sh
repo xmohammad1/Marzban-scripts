@@ -821,7 +821,7 @@ services:
     volumes:
       - /var/lib/marzban:/var/lib/marzban
     depends_on:
-      mysql
+      - mysql
 
   mysql:
     image: mysql:lts
