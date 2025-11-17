@@ -306,6 +306,11 @@ services:
     image: xmohammad1/marzban-node:latest
     restart: always
     network_mode: host
+    ulimits:
+      nofile:
+        soft: 500000
+        hard: 500000
+      nproc: 50000
     environment:
       SSL_CLIENT_CERT_FILE: "/var/lib/marzban-node/cert.pem"
       SERVICE_PORT: "$SERVICE_PORT"
